@@ -1,5 +1,5 @@
 fun main(args: Array<String>){
-    doWhileLoop()
+    loopUsingDownTo()
 }
 
 
@@ -42,7 +42,11 @@ private fun loopUsingDownTo() {
     val endTo = 0
 
     for (i in startFrom downTo endTo) {
-        println(i)
+        if (i % 2 == 0){
+            continue // it will skip
+        }else{
+            println(i)
+        }
     }
 }
 /* ------------------
@@ -66,6 +70,9 @@ private fun whileLoop(){
 
     while (startFrom <= endTo){
         println(startFrom)
+        if (startFrom == 5)
+            break // it will stop this loop
+
         startFrom++
     }
 }
